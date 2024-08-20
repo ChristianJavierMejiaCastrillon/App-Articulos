@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2181CFB4-7C87-40B9-B6DF-897D0B78388B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>presentacion</RootNamespace>
+    <AssemblyName>presentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgregarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarCategoria.Designer.cs">
+      <DependentUpon>AgregarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarMarca.Designer.cs">
+      <DependentUpon>AgregarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioArticulos.Designer.cs">
+      <DependentUpon>FormularioArticulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioInicio.Designer.cs">
+      <DependentUpon>FormularioInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nuevo Articulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nuevo Articulo.Designer.cs">
+      <DependentUpon>Nuevo Articulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AgregarCategoria.resx">
+      <DependentUpon>AgregarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarMarca.resx">
+      <DependentUpon>AgregarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioArticulos.resx">
+      <DependentUpon>FormularioArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioInicio.resx">
+      <DependentUpon>FormularioInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nuevo Articulo.resx">
+      <DependentUpon>Nuevo Articulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\acceso\acceso.csproj">
+      <Project>{a5b88dbd-cbd4-41ec-bc40-317e828682da}</Project>
+      <Name>acceso</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\dominio\dominio.csproj">
+      <Project>{249ab9b6-f680-4eeb-a657-19a335ac1895}</Project>
+      <Name>dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\imagenes\fondo4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\imagenes\fondo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\imagenes\fondo5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\imagenes\icons8-tema-94.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\imagenes\button_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\imagenes\button_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\imagenes\boton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\imagenes\button_original_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\imagenes\button_original_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\imagenes\azul claro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\imagenes\gris.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
